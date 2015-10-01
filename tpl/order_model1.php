@@ -48,7 +48,6 @@
 
 	<script type="text/javascript">
 		$(function(){
-			$.ajaxSetup({ cache: false });
 
 			//prevent error msg when opening saved page
 			if (window.opener == null) return false;
