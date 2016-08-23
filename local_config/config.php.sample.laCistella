@@ -20,25 +20,25 @@ class configuration_vars {
   /**
    * General variables
    */
-  public $default_language = 'es';
+  public $default_language = 'ca-va';
   
 
   /**
    * What is the name of this cooperative?
    */
-  public $coop_name = 'L\'Aixada';
+  public $coop_name = 'CFG-RECOMANADA per La Cistella';
   // Show coop name on header of login.php
-    public $login_header_show_name = false;
+    public $login_header_show_name = true;
   // Header image used in login.php.
-    public $login_header_image = "local_config/custom_img/our_cooperative_banner.jpg";
+    public $login_header_image = "local_custom/img/LaCistella_Base_raport-1352x150.jpg";
             // Set to false to not use image
   // Used in Report headers
-    public $coop_header_logo = 'local_config/custom_img/our_cooperative_logo.png';
+    public $coop_header_logo = false;
             // Set to false to not use logo
-    public $coop_VAT_number = 'F9999999'; // CIF
-    public $coop_address = 'Street...';
-    public $coop_city = 'Zip City';
-    public $coop_contact_inf = 'email@bla.com<br>bla bla bla...'; // Use <br> to force line break
+    public $coop_VAT_number = false; // CIF
+    public $coop_address = false;
+    public $coop_city = false;
+    public $coop_contact_inf = false;
 
   
   /**
@@ -62,14 +62,14 @@ class configuration_vars {
    * options are shown, otherwise can only make orders.
    * @var boolean
    */
-  public $use_shop = true;
+  public $use_shop = false;
 
   /**
    * Allows allocate losses order distribution to a fictitious family (when the
    * review is done)
    * @var integer
    */
-  // public $revision_fixed_uf = 1; // Uncomment to active
+  public $revision_fixed_uf = 1;
   
   /**
    *
@@ -77,7 +77,7 @@ class configuration_vars {
    * (if it is not set `false` is used as default value)
    * @var boolean
    */
-  public $validate_self = false;
+  public $validate_self = true;
 
   /**
    *
@@ -85,7 +85,7 @@ class configuration_vars {
    * (if it is not set `true` is used as default value)
    * @var boolean
    */
-  public $validate_deposit = true;
+  public $validate_deposit = false;
 
   /**
    * What period are shown the carts on validation, values allowed: 'day' 
@@ -95,7 +95,7 @@ class configuration_vars {
    * may be desirable to see all carts of the week.
    * @var boolean
    */  
-  public $validate_show_carts = 'day';
+  public $validate_show_carts = 'week';
 
   /**
    * Allows create a empty cart at validation. This is usefully to assign
@@ -105,7 +105,7 @@ class configuration_vars {
    *    not validated carts (default value is false)
    * @var boolean
    */  
-  public $validate_btn_create_carts = false;
+  public $validate_btn_create_carts = true;
  
   /**
    * 
@@ -125,7 +125,7 @@ class configuration_vars {
   /**
    * Allows to put stock products into a HU order. Default value is false.
    */
-  public $orders_allow_stock = false;
+  public $orders_allow_stock = true;
   
   /**
    *
@@ -135,14 +135,14 @@ class configuration_vars {
    *    descending) and `name` (alphabetically by name) Default value is `desc`.
    * 
    */
-  public $order_review_uf_sequence = 'desc';
+  public $order_review_uf_sequence = 'asc';
   
   /**
    * Possible methods of distributing orders are: 'only_distribute',
    *    'distribute_and_validate' and 'choice' (both are available),
    *     default is 'only_distribute'.
    */
-  public $order_distribution_method = 'only_distribute';
+  public $order_distribution_method = 'distribute_and_validate';
   
   /**
    * When the method 'distribute_and_validate' is used can also record the
@@ -170,7 +170,7 @@ class configuration_vars {
    * (For data migration internal method provides a more comfortable to read or
    *    edit db-backup sql files)
    */
-  // public $db_backup_method = 'int';
+  public $db_backup_method = 'int';
   
   
   /**
@@ -193,7 +193,7 @@ class configuration_vars {
     'dates' => array(
         // Date formats, uses formatting of php 
         'date' => 'd-m-Y',
-        'datetime' => 'd-m-Y H:i'
+        'datetime' => 'd-m-y H:i'
     ),
     'numbers' => array(
         // Numeric formats as "ndt" where:
@@ -227,7 +227,7 @@ class configuration_vars {
    * emailing order reports and incidents will not work. 
    * @var boolean
    */
-  public $internet_connection = false; 
+  public $internet_connection = true; 
   
   
   
@@ -286,13 +286,13 @@ class configuration_vars {
    * will be sent to the respective providers directly. Only works on 
    * servers where PHP.ini is configured appropriately. 
    */
-  public $email_orders = false; 
+  public $email_orders = true; 
   
   
   /**
    * format of emailed orders: just summarized "1" or just extended "2" or both "3"
    */
-  public $email_order_format = 3;
+  public $email_order_format = 1;
   
   
   
@@ -570,7 +570,7 @@ class configuration_vars {
      * NOTE: 'Windows-1252' Is the character encoding of the Latin alphabet
      *       used by Windows systems.
 	 */
-    public $import_from_char_encoding = 'auto';
+    public $import_from_char_encoding = 'Windows-1252';
 
     
     /**
@@ -578,7 +578,7 @@ class configuration_vars {
      * with an option to try to import all allowed columns without explicit column matching. 
      * This makes sense for transfers between aixada platforms where we can assume that columns match
      */  
-    public $allow_global_import = true;  
+    public $allow_global_import = false;  
      
 
 	/**
@@ -601,7 +601,7 @@ class configuration_vars {
 								'order_min_quantity' => 'allow',
 								'category_id' => 'allow',
 								'rev_tax_type_id' => 'allow',
-								'iva_percent_id' => 'allow',
+								'iva_percent_type_id' => 'allow',
 								'unit_price' => 'allow',
 								'unit_measure_order_id' => 'allow',
 								'unit_measure_shop_id' => 'allow',
@@ -643,7 +643,7 @@ class configuration_vars {
         // Table any db_field_name must be allowed by $allow_import_for.
         'aixada_product' => array(
             // Template name
-            'begues' => array(
+            'begues3' => array(
                 'options' => array( //optional
                     'import_mode' => '2', // '0' update only (default mode)
                                           // '1' insert all
@@ -656,7 +656,7 @@ class configuration_vars {
                 ),                    
                 'match_columns' => array( //Required
                 // db_field_name => col_name or regex to match col_name.
-                    'custom_product_ref' => '/.*_product_ref/',
+                    'custom_product_ref' => '/.*ref_product_unit3/',
                     'name' => '/.*name/',
                     'unit_price' => '/.*unit_price/',
                     'unit_measure_order_id' => '/.*unit_measure_order_id/',
@@ -665,7 +665,7 @@ class configuration_vars {
                 'forced_values' => array( //optional
                     'active' => '1',
                     'category_id' => '1000',
-                    'rev_tax_type_id' => 2
+                    'rev_tax_type_id' => 1
                 ),
                 'updatable_columns' => array( //optional: default is all columns
                     'name', 'unit_price', 
@@ -692,7 +692,7 @@ class configuration_vars {
 	// With 'use_providers' key lets you choose whether providers accounts are
 	// used, disabling the operations of providers not appear.
 	// NOTE: This key has priority over 'account_operations'.
-		'use_providers' => false
+		'use_providers' => true
     );
              
 

@@ -1036,4 +1036,8 @@ $Text['os_reopen_order'] =
     Si es torna a obrir
     <b>cal parlar amb el proveïdor</b>
     per dir-li que la comanda ha estat cancel·lada!";
+
+if (file_exists(__ROOT__.'local_config/lang_custom/ca-va.php')) {
+	include_once(__ROOT__.'local_config/lang_custom/ca-va.php');
+}
 ?>

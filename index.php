@@ -539,13 +539,23 @@
 				</div>
 				<?php } // - - - - - - - - - - USE SHOP: end ?>
 				<div class="homeIcon index_navOrder">
+                    <!-- XMB canvi icona
 					<a href="shop_and_order.php?what=Order"><img src="img/pedido.png"/></a>
+                    -->
+                    <a href="shop_and_order.php?what=Order"><img src="img/cesta.png"/></a><!-- XMB nova icona -->
 					<p><a href="shop_and_order.php?what=Order"><?php echo $Text['icon_order'];?></a></p>
 				</div>
 				<div class="homeIcon index_navIncidents">
 					<a href="incidents.php"><img src="img/incidencias.png"/></a>
 					<p><a href="incidents.php"><?php echo $Text['icon_incidents'];?></a></p>
 				</div>
+
+				<!-- EFS-ini: añadimos la opción imprimir pedido disponible para todos -->
+				<div class="homeIcon">
+					<a href="local_custom/order_send.php"><img src="img/validar.png"/></a>
+					<p><a href="local_custom/order_send.php"><?php echo $Text['icon_print'];?></a></p>
+				</div>
+				<!-- EFS-fin -->
 			</div>
 			<div id="rightSummaryCol" class="aix-style-layout-splitW80 floatLeft aix-layout-widget-center-col">
 

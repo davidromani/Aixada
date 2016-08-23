@@ -1046,4 +1046,7 @@ $Text['os_reopen_order'] =
     <b>se debe hablar con el proveedor</b>
     para decirle que el pedido ha sido cancelado!";
 
+if (file_exists(__ROOT__.'local_config/lang_custom/es.php')) {
+	include_once(__ROOT__.'local_config/lang_custom/es.php');
+}
 ?>

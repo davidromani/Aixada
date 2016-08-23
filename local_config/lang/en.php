@@ -1049,6 +1049,7 @@ $Text['os_reopen_order'] =
 
 //$Text[''] = ""; 
 
-
-
+if (file_exists(__ROOT__.'local_config/lang_custom/en.php')) {
+	include_once(__ROOT__.'local_config/lang_custom/en.php');
+}
 ?>

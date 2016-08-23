@@ -17,7 +17,6 @@ $config_account_operations = array(
         )
     ),
     'deposit_others' => array(
-        'correction' => true,
         'accounts' => array(
             'account_to' => array('sign' => +1, 'method_id' => 7) // 7 deposit
         )
@@ -28,6 +27,7 @@ $config_account_operations = array(
         )
     ),
     'refund_uf' => array(
+        'correction' => true,
         'accounts' => array(
             'account_from' => array('sign' => -1, 'method_id' => 10,// 10 withdrawal
                     'auto_desc' => 'refund_to_uf'),
@@ -61,14 +61,6 @@ $config_account_operations = array(
                     'auto_desc' => 'move_from')
         )
     ),
-    'correction' => array(
-        'correction' => true,
-        'accounts' => array(
-            'account_to' => array('sign' => 0, 'method_id' => 9, // 9 correction
-                    'default_desc' => 'correction')
-        )
-    )
-    ,   
     'a_debit_uf' => array(
         'correction' => true,
         'accounts' => array(
@@ -90,7 +82,14 @@ $config_account_operations = array(
             'provider_from' => array('sign' => -1, 'method_id' => 8, // 8 bill
                     'default_desc' => 'a_invoice')
         )
-    )
+    ),
+    'correction' => array(
+        'correction' => true,
+        'accounts' => array(
+            'account_to' => array('sign' => 0, 'method_id' => 9, // 9 correction
+                    'default_desc' => 'correction')
+        )
+    )   
 );
 
 ?>
