@@ -251,6 +251,7 @@ $Text['mon_amount'] = "Import";
 $Text['mon_dailyBalance'] = "Saldo del dia";
 $Text['mon_accountBalances'] = "Saldo dels comptes";
 $Text['mon_uf_balances'] = "Saldo de les UFs";
+$Text['mon_provider_balances'] = "Saldo de Proveïdors";
 $Text['mon_result'] = "Resultat";
 $Text['mon_lastOper'] = "Última operació";
 $Text['mon_operation_account'] = "Fer operacions";
@@ -700,6 +701,8 @@ $Text['msg_con_disValitate_prvInv'] =
     <li>i l'import de l'albarà s'anotarà al compte del proveïdor com a factura.</li>
     </ul>";
 $Text['msg_err_disValitate'] = "Error al distribuir i validar la comanda #";
+$Text['msg_err_disVal_nonEmpyCatrs'] = 
+    "Hi ha validacions pendents per a la data {date_for_shop}.<br>No és possible \"Distribuir i validar\" per a la mateixa data si hi ha validacions pendents!";
 $Text['btn_disValitate_ok'] = "Entesos: distribueix i valida!";
 $Text['btn_bakToRevise'] = "Encara no: vull seguir revisant";
 $Text['btn_disValitate_done'] = "Correcte!<br>La comanda #{order_id} ha estat distribuïda i validada.";
@@ -885,6 +888,8 @@ $Text['msg_err_delorerable'] = "Ja s'han demanat productes per aquesta data. No 
 $Text['msg_pre2Order'] = "Converteix aquesta comanda acumulativa a comanda normal. Pots triar una data d'entrega";
 
 $Text['msg_err_modified_order'] = "Algú ha modificat els productes a demanar per la data actual. Alguns productes que havies demanat ja no estan disponibles i desapareixeran del teu carret una vegada recarregat.";
+$Text['msg_err_modif_order_closed'] = "S'ha intentat modificar alguna comanda que ja està tancada.";
+$Text['msg_err_cart_reloaded'] = "La seva cistella es mostrarà de nou.";
 $Text['btn_confirm_del'] = "Esborrar! Estic segur";
 $Text['print_new_win'] = "Nova finestra";
 $Text['print_pdf'] = "Descarregar pdf";

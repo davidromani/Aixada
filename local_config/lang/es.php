@@ -259,6 +259,7 @@ $Text['mon_amount'] = "Importe";
 $Text['mon_dailyBalance'] = "Saldo del día";
 $Text['mon_accountBalances'] = "Saldo de las cuentas";
 $Text['mon_uf_balances'] = "Saldo de las UFs";
+$Text['mon_provider_balances'] = "Saldo de Proveedores";
 $Text['mon_result'] = "Resultado";
 $Text['mon_lastOper'] = "Última operación";
 $Text['mon_operation_account'] = "Hacer operaciones";
@@ -709,6 +710,8 @@ $Text['msg_con_disValitate_prvInv'] =
     <li>y el importe del albarán se anotará en la cuenta del proveedor como factura.</li>
     </ul>";
 $Text['msg_err_disValitate'] = "Error al distribuir y validar el pedido #";
+$Text['msg_err_disVal_nonEmpyCatrs'] =
+    "Hay validaciones pendientes para la fecha {date_for_shop}.<br>No es posible \"Distribuir y validar\" para la misma fecha si hay validaciones pendientes!";
 $Text['btn_disValitate_ok'] = "Entendidos: distribuye y valida!";
 $Text['btn_bakToRevise'] = "Todavía no: quiero seguir revisando";
 $Text['btn_disValitate_done'] = "Correcto!<br>El pedido #{order_id} ha sido distribuido y validado.";
@@ -894,6 +897,8 @@ $Text['msg_err_delorerable'] = "Existe un pedido para este producto y fecha. No 
 $Text['msg_pre2Order'] = "Convierte el pedido acumulativo en un pedido regular. Se crea una fecha de entrega. ";
 
 $Text['msg_err_modified_order'] = "Alguien ha modificado los productos a pedir para fecha actual. Algunos productos que habías pedido ya no están disponibles y desaparecerán de tu carrito una vez recargado.";
+$Text['msg_err_modif_order_closed'] = "Se ha intentado modificar algún pedido que ya está cerrado.";
+$Text['msg_err_cart_reloaded'] = "Su cesta se mostrará de nuevo.";
 $Text['btn_confirm_del'] = "Sí, eliminar!!";
 $Text['print_new_win'] = "Ventana nueva";
 $Text['print_pdf'] = "Descarga pdf";

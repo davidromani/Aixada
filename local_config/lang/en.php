@@ -255,6 +255,7 @@ $Text['mon_amount'] = "Amount";
 $Text['mon_dailyBalance'] = "Balance of the day";
 $Text['mon_accountBalances'] = "Balance of accounts";
 $Text['mon_uf_balances'] = "HU balances";
+$Text['mon_provider_balances'] = "Provider balances";
 $Text['mon_result'] = "Result";
 $Text['mon_lastOper'] =  "Last operation";
 $Text['mon_operation_account'] = "Make operations";
@@ -708,6 +709,9 @@ $Text['msg_con_disValitate_prvInv'] =
     <li>and the total amount will be put as invoice to the provider account.</li>
     </ul>";
 $Text['msg_err_disValitate'] = "Error when distribute and validate order #";
+$Text['msg_err_disVal_nonEmpyCatrs'] = 
+    // Used to throw exception, multiple text lines causes a PHP warning "Header may not contain more than a single header..."
+    "There validations pending for {date_for_shop}.<br>Is not possible \"Distribute and validate\" for the same date if there are outstanding validations!";
 $Text['btn_disValitate_ok'] = "Understood: distributes and validates!";
 $Text['btn_bakToRevise'] = "Not yet: I want to continue reviewing";
 $Text['btn_disValitate_done'] = "Right!<br>Order #{order_id} has been distributed and validated.";
@@ -893,6 +897,8 @@ $Text['msg_err_delorerable'] = "Items have been ordered for this product and dat
 $Text['msg_pre2Order'] = "Convert this preorder to a regular order. This will assign an order date, i.e. when the expected items will arrive.";
 
 $Text['msg_err_modified_order'] = "Orderable products have been deactivated for the current date while you were ordering. Some products that you already had ordered are no longer available and will disappear from your cart after it has been reloaded.";
+$Text['msg_err_modif_order_closed'] = "Attempt to modify an order closed.";
+$Text['msg_err_cart_reloaded'] = "Your cart will be reloaded.";
 $Text['btn_confirm_del'] = "Delete anyway!!";
 $Text['print_new_win'] = "New window";
 $Text['print_pdf'] = "Download pdf";

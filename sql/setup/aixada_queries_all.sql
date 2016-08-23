@@ -496,7 +496,7 @@ begin
 		aixada_provider pv,
 		aixada_product p
 	where
-		po.closing_date > today
+		po.closing_date >= today
 		and po.date_for_order <= until
 		and po.product_id = p.id
 		and p.provider_id = pv.id
@@ -2281,7 +2281,7 @@ begin
 		po.closing_date,
 		datediff(po.closing_date, today) as time_left,
 		(select
-			o.id
+			max(o.id) -- This prevent error: "Subquery returns more than 1 row"
 		 from
 		 	aixada_order o,
 		 	aixada_product pp
@@ -2471,9 +2471,7 @@ begin
         u.unit,
    		round((p.unit_price * (1 + iva.percent/100) * (1 + r.rev_tax_percent/100)),2) as unit_price,
 		iva.percent as iva_percent,
-   		r.rev_tax_percent,
-        p.unit_price
-        
+   		r.rev_tax_percent
    from 
 	   	aixada_product p,
 	   	aixada_provider pv,
